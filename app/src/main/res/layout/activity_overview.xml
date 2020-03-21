@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:elevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?android:attr/actionBarSize"
+        app:layout_anchor="@id/bottomAppBar3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background"
+            android:elevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="60dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/transparentWhite"
+                app:civ_border_width="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Alex Markowitsch"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/main_tab_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:tabIndicatorColor="@color/colorWhite"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/colorWhite">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notizen" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Erinnerungen" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lesezeichen" />
+            </com.google.android.material.tabs.TabLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/main_viewpager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar3"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+
+        app:backgroundTint="@color/colorWhite"
+        app:fabAlignmentMode="end"
+        app:navigationIcon="@drawable/ic_menu_black_24dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@color/colorBlack"
+        app:layout_anchor="@id/bottomAppBar3"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/colorWhite" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

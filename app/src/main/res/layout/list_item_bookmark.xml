@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="5dp">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="#FF7276"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="42dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_bookmark" />
+
+        <TextView
+            android:id="@+id/list_item_bookmark_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:ellipsize="end"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            tools:text="This is a simple reminder description" />
+
+        <TextView
+            android:id="@+id/list_item_bookmark_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:ellipsize="none"
+            android:text="https://api.newmoder.com/adsasd"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_bookmark_heading" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
